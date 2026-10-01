@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Scale Shadow -->
+    <path
+        android:pathData="M27,81 L81,81 L79,84 L29,84 Z"
+        android:fillColor="#55000000" />
+
+    <!-- Scale Outer Glow Edge (Glass Bevel) -->
+    <path
+        android:pathData="M37,28 L71,28 C74,28 76,30 76.5,33 L82.5,75 C83,78 81,80 78,80 L30,80 C27,80 25,78 25.5,75 L31.5,33 C32,30 34,28 37,28 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="54"
+                android:startY="28"
+                android:endX="54"
+                android:endY="80"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#8000E5FF" />
+                <item android:offset="0.6" android:color="#330080FF" />
+                <item android:offset="1.0" android:color="#CC00D9FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Scale Tempered Glass Surface Deck -->
+    <path
+        android:pathData="M37.5,29.5 L70.5,29.5 C72.8,29.5 74.4,31.2 74.8,33.5 L80.8,74.5 C81.2,76.8 79.5,78.5 77.2,78.5 L30.8,78.5 C28.5,78.5 26.8,76.8 27.2,74.5 L33.2,33.5 C33.6,31.2 35.2,29.5 37.5,29.5 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="37"
+                android:startY="30"
+                android:endX="71"
+                android:endY="78"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#1A2846" />
+                <item android:offset="0.35" android:color="#0F1A30" />
+                <item android:offset="1.0" android:color="#090F1C" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Glass Reflection Highlight Streak -->
+    <path
+        android:pathData="M70,30 L74,33 L62,54 L52,54 Z"
+        android:fillColor="#22FFFFFF" />
+
+    <!-- Scale LED Display Screen Border -->
+    <path
+        android:pathData="M43,32.5 L65,32.5 C66.5,32.5 67.5,33.5 67.5,35 L67,41 C67,42.5 66,43.5 64.5,43.5 L43.5,43.5 C42,43.5 41,42.5 41,41 L40.5,35 C40.5,33.5 41.5,32.5 43,32.5 Z"
+        android:fillColor="#040914"
+        android:strokeWidth="0.8"
+        android:strokeColor="#4D00E5FF" />
+
+    <!-- LED Display Digits: "75.0" -->
+    <!-- 7 -->
+    <path
+        android:pathData="M47,35.5 L50.5,35.5 L49,40.5"
+        android:strokeWidth="1"
+        android:strokeColor="#00E5FF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- 5 -->
+    <path
+        android:pathData="M54.5,35.5 L52,35.5 L52,37.8 L54.5,37.8 L54.5,40.5 L52,40.5"
+        android:strokeWidth="1"
+        android:strokeColor="#00E5FF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- . -->
+    <path
+        android:pathData="M56,40.5 L56.3,40.5"
+        android:strokeWidth="1.2"
+        android:strokeColor="#00E5FF"
+        android:strokeLineCap="round" />
+    <!-- 0 -->
+    <path
+        android:pathData="M58,36 C58,35.5 59.5,35.5 59.5,35.5 L60.5,35.5 C61,35.5 61.5,36 61.5,36.5 L61.5,39.5 C61.5,40.2 61,40.5 60.5,40.5 L59.5,40.5 C59,40.5 58,40 58,39.5 Z"
+        android:strokeWidth="0.9"
+        android:strokeColor="#00E5FF"
+        android:strokeLineCap="round" />
+    <!-- kg text indicator -->
+    <path
+        android:pathData="M63,36 L63,38 M63,37 L64.2,36 M63,37.5 L64.2,38.5"
+        android:strokeWidth="0.5"
+        android:strokeColor="#00E5FF" />
+
+    <!-- Left Bioimpedance Electrode (Curved Pill) -->
+    <path
+        android:pathData="M34,44 C36,44 38,46 38,48 L37,68 C37,71 35,73 32.5,73 C30.5,73 30,71 30.5,68 L32,48 C32.3,45.5 33,44 34,44 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="30"
+                android:startY="44"
+                android:endX="38"
+                android:endY="73"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#9900E5FF" />
+                <item android:offset="0.5" android:color="#4D00B0FF" />
+                <item android:offset="1.0" android:color="#B300F2FE" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Left Electrode Rim -->
+    <path
+        android:pathData="M34,44 C36,44 38,46 38,48 L37,68 C37,71 35,73 32.5,73 C30.5,73 30,71 30.5,68 L32,48 C32.3,45.5 33,44 34,44 Z"
+        android:strokeWidth="0.6"
+        android:strokeColor="#B300F7FF"
+        android:fillColor="#00000000" />
+
+    <!-- Right Bioimpedance Electrode (Curved Pill) -->
+    <path
+        android:pathData="M74,44 C75,44 75.7,45.5 76,48 L77.5,68 C78,71 77.5,73 75.5,73 C73,73 71,71 71,68 L70,48 C70,46 72,44 74,44 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="70"
+                android:startY="44"
+                android:endX="78"
+                android:endY="73"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#9900E5FF" />
+                <item android:offset="0.5" android:color="#4D00B0FF" />
+                <item android:offset="1.0" android:color="#B300F2FE" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Right Electrode Rim -->
+    <path
+        android:pathData="M74,44 C75,44 75.7,45.5 76,48 L77.5,68 C78,71 77.5,73 75.5,73 C73,73 71,71 71,68 L70,48 C70,46 72,44 74,44 Z"
+        android:strokeWidth="0.6"
+        android:strokeColor="#B300F7FF"
+        android:fillColor="#00000000" />
+
+    <!-- Center Cult Crest Crown / Emblem -->
+    <!-- Crown Points -->
+    <path
+        android:pathData="M48,47 L51,49.5 L54,45 L57,49.5 L60,47 L58.5,51 L49.5,51 Z"
+        android:fillColor="#E2F1FF"
+        android:strokeWidth="0.5"
+        android:strokeColor="#FFFFFF" />
+    <!-- Crest 'C' Arc -->
+    <path
+        android:pathData="M57.5,53 C56.5,52 55.2,51.5 54,51.5 C51,51.5 48.8,53.8 48.8,57 C48.8,60.2 51,62.5 54,62.5 C55.5,62.5 56.8,61.8 57.5,60.5"
+        android:strokeWidth="2.4"
+        android:strokeColor="#D7E8FF"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M56.8,54 C56,53.2 55,52.8 54,52.8 C51.8,52.8 50,54.6 50,57 C50,59.4 51.8,61.2 54,61.2 C55,61.2 56,60.6 56.8,59.8"
+        android:strokeWidth="1.2"
+        android:strokeColor="#00F0FF"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- "CULT" Lettering on Deck -->
+    <!-- C -->
+    <path
+        android:pathData="M47.5,68 C46.5,68 45.8,68.8 45.8,70 C45.8,71.2 46.5,72 47.5,72"
+        android:strokeWidth="0.9"
+        android:strokeColor="#B8D8F8"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <!-- U -->
+    <path
+        android:pathData="M49.5,68 L49.5,71 C49.5,71.8 50.2,72 50.8,72 C51.4,72 52.1,71.8 52.1,71 L52.1,68"
+        android:strokeWidth="0.9"
+        android:strokeColor="#B8D8F8"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <!-- L -->
+    <path
+        android:pathData="M54.2,68 L54.2,72 L56.5,72"
+        android:strokeWidth="0.9"
+        android:strokeColor="#B8D8F8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+    <!-- T -->
+    <path
+        android:pathData="M58.5,68 L62,68 M60.2,68 L60.2,72"
+        android:strokeWidth="0.9"
+        android:strokeColor="#B8D8F8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+
+    <!-- Bottom Scale Glow Accent Line -->
+    <path
+        android:pathData="M38,76 L70,76"
+        android:strokeWidth="0.8"
+        android:strokeColor="#4D00E5FF"
+        android:strokeLineCap="round" />
+
+</vector>

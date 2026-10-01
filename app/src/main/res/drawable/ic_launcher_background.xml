@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Gradient Background -->
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="108"
+                android:startY="0"
+                android:endX="0"
+                android:endY="108"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00DFFF" />
+                <item android:offset="0.25" android:color="#0080FF" />
+                <item android:offset="0.6" android:color="#4710C1" />
+                <item android:offset="1.0" android:color="#21004F" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Subtle Ambient Glow -->
+    <path
+        android:pathData="M54,54m-46,0a46,46 0 1,1 92,0a46,46 0 1,1 -92,0"
+        android:strokeWidth="1.2"
+        android:strokeColor="#3300FFFF"
+        android:fillColor="#00000000" />
+
+    <!-- Orbital Telemetry Track -->
+    <path
+        android:pathData="M54,54m-40,0a40,40 0 1,1 80,0a40,40 0 1,1 -80,0"
+        android:strokeWidth="0.8"
+        android:strokeColor="#4D00E5FF"
+        android:fillColor="#00000000" />
+
+    <!-- Secondary Orbital Track -->
+    <path
+        android:pathData="M54,54m-48,0a48,48 0 1,1 96,0a48,48 0 1,1 -96,0"
+        android:strokeWidth="0.5"
+        android:strokeColor="#26FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- Satellite orbital marker dot -->
+    <path
+        android:pathData="M92,54m-2,0a2,2 0 1,1 4,0a2,2 0 1,1 -4,0"
+        android:fillColor="#80FFFFFF" />
+
+    <!-- Arrow Track pointing to top right -->
+    <path
+        android:pathData="M78,30L84,24M84,24L79,24M84,24L84,29"
+        android:strokeWidth="1.2"
+        android:strokeColor="#8000FFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+
+</vector>
