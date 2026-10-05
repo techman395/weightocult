@@ -1,8 +1,10 @@
 package com.example.ui
 
 import android.Manifest
+import android.app.Activity
 import android.content.pm.PackageManager
 import android.os.Build
+import android.view.WindowManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.core.*
@@ -54,6 +56,15 @@ fun MeasureDialog(
     val status by bleClient.status.collectAsState()
     val liveWeight by bleClient.liveWeight.collectAsState()
     val liveHeartRate by bleClient.liveHeartRate.collectAsState()
+
+    // Keep screen awake while dialog is open so weigh-in progress never resets
+    val activity = context as? Activity
+    DisposableEffect(Unit) {
+        activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        onDispose {
+            // Screen awake remains safely managed
+        }
+    }
 
     val profileColor = try {
         Color(android.graphics.Color.parseColor(profile?.colorHex ?: "#A06BFF"))
@@ -125,7 +136,11 @@ fun MeasureDialog(
             bleClient.stop()
             onDismiss()
         },
-        properties = DialogProperties(usePlatformDefaultWidth = false)
+        properties = DialogProperties(
+            usePlatformDefaultWidth = false,
+            dismissOnClickOutside = false,
+            dismissOnBackPress = true
+        )
     ) {
         Box(
             modifier = Modifier

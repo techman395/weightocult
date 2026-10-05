@@ -82,7 +82,7 @@ This application is built with gratitude to the open-source community:
 ### Build Commands
 ```bash
 # Clone the repository
-git clone https://github.com/techman395/weightocult.git
+git clone https://github.com/YOUR_USERNAME/weightocult.git
 cd weightocult
 
 # Build debug APK
@@ -93,9 +93,7 @@ cd weightocult
 ```
 
 ---
-## 👤 Author & Maintainer
-- **techman395** ([@techman395](https://github.com/techman395))
-- 
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.

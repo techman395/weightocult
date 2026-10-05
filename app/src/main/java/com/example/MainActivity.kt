@@ -1,6 +1,7 @@
 package com.example
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -19,6 +20,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -50,6 +52,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        // Keep screen awake while app is in foreground to prevent timeout during weigh-ins
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         repository = OccultRepository(applicationContext)
         bleClient = CultBleClient(applicationContext)
@@ -85,10 +90,13 @@ fun OccultApp(
         else readings.filter { it.profileId == activeProfile.id }.sortedBy { it.timestamp }
     }
 
-    var currentTab by remember { mutableStateOf(AppTab.TODAY) }
-    var showMeasureDialog by remember { mutableStateOf(false) }
-    var showManualDialog by remember { mutableStateOf(false) }
-    var showDataDialog by remember { mutableStateOf(false) }
+    var currentTabName by rememberSaveable { mutableStateOf(AppTab.TODAY.name) }
+    val currentTab = remember(currentTabName) {
+        try { AppTab.valueOf(currentTabName) } catch (_: Exception) { AppTab.TODAY }
+    }
+    var showMeasureDialog by rememberSaveable { mutableStateOf(false) }
+    var showManualDialog by rememberSaveable { mutableStateOf(false) }
+    var showDataDialog by rememberSaveable { mutableStateOf(false) }
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -208,7 +216,7 @@ fun OccultApp(
                     val isSelected = tab == currentTab
                     NavigationBarItem(
                         selected = isSelected,
-                        onClick = { currentTab = tab },
+                        onClick = { currentTabName = tab.name },
                         icon = {
                             Icon(
                                 tab.icon,
